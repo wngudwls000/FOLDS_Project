@@ -1,8 +1,0 @@
-<launch>
-    <include file="$(find utm_lla)/launch/coordinate_convertion.launch">
-    </include>
-
-    <node name="localization_utm_node" pkg="delivery_car" type="localization_utm_node" >
-    </node>
-
-</launch>
