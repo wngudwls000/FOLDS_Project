@@ -1,0 +1,2 @@
+geometry_msgs/PoseStamped position
+nav_msgs/OccupancyGrid occupancy_grid

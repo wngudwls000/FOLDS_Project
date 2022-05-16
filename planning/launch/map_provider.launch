@@ -1,0 +1,16 @@
+<launch>
+
+    <!-- 기존에 있는 map을 제공 노드 -->
+    <arg name="map_file" default="$(find test_pkg)/map/my_map.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+    <!-- map 좌표와 odom 좌표를 연결해주는 노드 -->
+    <node pkg="test_pkg" type="lasertf_broadcaster" name="lasertf_node" output="screen"/>
+    <!-- 실시간으로 safety 거리를 occupancy_grid에 실시간으로 추가해주는 노드 -->
+    <node pkg="test_pkg" type="grid_setter" name="mission_grid_setter" output="screen"/>
+    <!-- goal 위치를 제공해주는 노드 -->
+    <node pkg="test_pkg" type="goal_provider" name="goal_provider" output="screen"/>
+    <!-- path를 제공해주는 노드 -->
+    <node pkg="test_pkg" type="test_mission" name="test_mission_node" output="screen"/>>
+
+</launch>

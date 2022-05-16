@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="test_pkg" type="path_follow_direction" name="path_follow_direction" output="screen"/>>
+</launch>

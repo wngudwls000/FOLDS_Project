@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="test_pkg" type="test_mission" name="test_mission_node" output="screen"/>>
+</launch>
